@@ -15,3 +15,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.smooth-underline-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.smooth-underline-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #191919;
+  transition: width 0.3s ease;
+}
+
+.smooth-underline-link:hover::before {
+  width: 100%;
+}
+
+@keyframes underlineAnimation {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.underline-nav-items {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline-nav-items::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.underline-nav-items:hover::before {
+  width: 100%;
+}
